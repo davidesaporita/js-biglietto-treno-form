@@ -194,7 +194,7 @@ th:not(:last-child) {
 }
 
 .rotate {
-    animation: rotateYourself 3s linear infinite;
+    animation: rotateYourself 2s linear infinite;
 }
 
 @keyframes rotateYourself {

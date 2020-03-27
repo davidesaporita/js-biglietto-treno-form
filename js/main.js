@@ -84,6 +84,6 @@ bottoneAnnulla.addEventListener('click',
         document.getElementById('carrozza').innerHTML = '';
         document.getElementById('codice-cp').innerHTML = '';
         document.getElementById('costo').innerHTML = '';
-        document.getElementById('dontclick').innerHTML = '';
+        document.getElementById('dontclick').remove();
     }
 );
