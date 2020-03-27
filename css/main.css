@@ -1,3 +1,15 @@
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
 
 .show {
     opacity: 1;
