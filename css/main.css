@@ -10,17 +10,44 @@
 body {
     background-color: #EDEDF4;
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
-}
-
- /* Typography */
-h1 {
-    font-size: 20px;
     color: #333;
 }
 
+ /* Typography */
+h1,
+h2.title,
+h3 {
+    font-size: 20px;
+    color: #333;
+    padding: 10px 10px 10px 0;
+}
+
 h1::after {
-    content: ' per Palermo!';
+    content: ' per Palermo';
+}
+
+h2.title::before {
+    content: 'Ecco a te: ';
+}
+
+h2.title::after {
+    content: ' per Catania';
+}
+
+.nome h2 {
+    font-style: italic;
+    text-align: center;
+    font-size: 12px;
+}
+
+h3#nome-passeggero {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-align: center;
+    font-size: 14px;
 }
 
 label {
@@ -113,9 +140,53 @@ select {
     min-height: 100px;
     padding: 20px;
     background-color: #cb0133;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-
-
-
 /* Stampa Biglietto */
+#biglietto {
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px 0;
+}
+
+#biglietto::before,
+#biglietto::after {
+    content: '';
+    position: absolute;
+    background-color: #cb0133;
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+#biglietto::before {
+    top: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#biglietto::after {
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.contenuti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offerta {
+    padding: 20px;
+    text-align: center;
+}
+
+td:not(:last-child),
+th:not(:last-child) {
+    padding-right: 40px;
+}
