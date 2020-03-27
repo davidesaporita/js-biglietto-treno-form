@@ -53,6 +53,16 @@ bottoneGenera.addEventListener('click',
         document.getElementById('codice-cp').innerHTML = codiceCp;
         document.getElementById('costo').innerHTML = costoBiglietto;
 
+        document.getElementById('costo').innerHTML = costoBiglietto;
+
+        document.getElementById('biglietto').innerHTML += '<div class="row" id="dontclick"><button class="btn" style="text-align:center;">Non cliccare qui</button></div>';
+        var dontclick = document.getElementById('dontclick');
+        dontclick.addEventListener('click', 
+            function() {
+                document.getElementById('biglietto').classList.add("rotate");
+            }
+        );
+
         // Mostra biglietto
         container.className = 'show';
     }   
@@ -74,6 +84,6 @@ bottoneAnnulla.addEventListener('click',
         document.getElementById('carrozza').innerHTML = '';
         document.getElementById('codice-cp').innerHTML = '';
         document.getElementById('costo').innerHTML = '';
+        document.getElementById('dontclick').innerHTML = '';
     }
 );
-
