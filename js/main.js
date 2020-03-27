@@ -62,13 +62,13 @@ bottoneGenera.addEventListener('click',
 
 bottoneAnnulla.addEventListener('click', 
     function() {
-        // Resetta input utente
+        // Reset input utente
         document.getElementById('nome').value = '';
         document.getElementById('km').value = '';
         document.getElementById('fascia-eta').value = 'maggiorenne';
         // Nascondi biglietto
         container.className = 'hidden';
-        // Resetta dati biglietto
+        // Reset dati biglietto
         document.getElementById('nome-passeggero').innerHTML = '';
         document.getElementById('offerta-applicata').innerHTML = '';
         document.getElementById('carrozza').innerHTML = '';
