@@ -55,13 +55,15 @@ bottoneGenera.addEventListener('click',
 
         document.getElementById('costo').innerHTML = costoBiglietto;
 
-        document.getElementById('biglietto').innerHTML += '<div class="row" id="dontclick"><button class="btn" style="text-align:center;">Non cliccare qui</button></div>';
-        var dontclick = document.getElementById('dontclick');
-        dontclick.addEventListener('click', 
-            function() {
-                document.getElementById('biglietto').classList.add("rotate");
-            }
-        );
+        if(!document.getElementById('dontclick')) {
+            document.getElementById('biglietto').innerHTML += '<div class="row" id="dontclick"><button class="btn" style="text-align:center;">Non cliccare qui</button></div>';
+            var dontclick = document.getElementById('dontclick');
+            dontclick.addEventListener('click', 
+                function() {
+                    document.getElementById('biglietto').classList.add("rotate");
+                }
+            );
+        }
 
         // Mostra biglietto
         container.className = 'show';
